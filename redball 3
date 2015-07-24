@@ -1,0 +1,234 @@
+<html>
+
+<head>
+<title> These Buttons Rock! </title>
+<script type='text/javascript' src='http://lrn.icstars.org/redball.js'></script>
+<script src="jquery.js"></script>
+<script type = 'text/javascript'>
+function sayhelloworld(){
+  alert('Get it Gina');
+}
+</script>
+<script type='text/javascript'>
+		function moveup()  {
+		   redball.top=redball.top -20;
+		}
+</script>
+<script type='text/javascript'>
+        function movedown ()  {
+          redball.top=redball.top +20;
+        }
+</script>
+<script type='text/javascript'> 
+		function moveleft ()  {
+		  redball.left=redball.left -20;
+		  }
+</script>
+<script type='text/javascript'>
+        function moveright ()  {
+		  redball.left=redball.left +20;
+		  }
+</script>
+<script>
+		function moveupright()  {
+		  moveup();
+		  moveright();
+		}
+</script>
+<script type='text/javascript'>
+        function movedownright ()  {
+          movedown();
+		  moveright();
+        }
+</script>
+<script type='text/javascript'> 
+		function moveupleft ()  {
+		  moveup();
+		  moveleft();
+		  }
+		  
+</script>
+<script type='text/javascript'>
+        function movedownleft ()  {
+		  movedown();
+		  moveleft();
+		  }
+</script>
+<script type='text/javascript'>
+function movesquare(){
+for (var i=0;i<9;i++) {
+     moveright();
+	 }
+	 for (var i=0;i<9;i++) {
+	 movedown() ;
+	 }
+	 for (var i=0;i<9;i++) {
+	 moveleft() ;
+	 }
+	 for (var i=0;i<9;i++) {
+	 moveup() ;
+	 }
+	 }
+	 </script>
+<script type='text/javascript'>
+function moveoct(){
+for (var i=0;i<9;i++) {
+     moveright();
+	 }
+	 for (var i=0;i<9;i++) {
+	 movedownright() ;
+	 }
+	 for (var i=0;i<9;i++) {
+	 movedown() ;
+	 }
+	 for (var i=0;i<9;i++) {
+	 movedownleft() ;
+	 }
+	 for (var i=0;i<9;i++) {
+	 moveleft() ;
+	 }
+	 for (var i=0;i<9;i++) {
+	 moveupleft() ;
+	 }
+	 for (var i=0;i<9;i++) {
+	 moveup() ;
+	 }
+	 for (var i=0;i<9;i++) {
+	 moveupright() ;
+	 }
+	 }
+	 </script>
+	 <script type='text/javascript'>
+function movetri(){
+for (var i=0;i<9;i++) {
+     movedownright();
+	 }
+	 for (var i=0;i<9;i++) {
+	 moveleft() ;
+	 }
+	 for (var i=0;i<9;i++) {
+	 moveupright() ;
+	 }
+	 }
+</script>
+<script type='text/javascript'>
+function getcolor(){
+var url= "https://echojsonapi.herokuapp.com/api/color/red"
+$.get(url,function(data){
+ var color= data["color"];
+ alert(color);
+ });
+}
+</script>
+</head>
+<body> 
+<tbody>
+<table border="20px">
+<thead>
+<tr>
+<th>
+Cool Stuff
+</tr>
+</th>
+<td><button onclick="getcolor();">Ajax Request</button></td>
+</tr>
+ <tr>
+ <th>
+ One Hop
+ </th>
+ <td><button onclick="moveup()">Move Up</button></td>
+ </tr>
+ 
+<tr>
+<th>
+Take It Back Now Y'all
+</th>
+<td><button onclick="movedown()">Move Down</button></td>
+</tr>
+
+<tr>
+<th>
+Slide To The Left
+</th>
+<td><button onclick="moveleft ()">Move Left</button></td>
+</tr>
+
+
+<tr>
+<th>
+Slide To The Right
+</th>
+<td><button onclick="moveright ()">Move Right</button></td>
+</tr>
+
+
+<tr>
+<th>
+Cha Cha Real Smooth
+</th>
+<td><button onclick="sayhelloworld()")>You Ready!?</button></td>
+</tr>
+
+
+<tr>
+<th>
+Turn Around
+</th>
+<td><button onclick="moveupright()">Move UpRight</button></td>
+</tr>
+
+
+<tr>
+<th stlye>
+Charlie Brown
+</th>
+<td><button onclick="movedownleft()">Move DownLeft</button></td>
+</tr>
+
+
+<tr>
+<th>
+Criss Cross
+</th>
+<td><button onclick="moveupleft ()">Move UpLeft</button></td>
+</tr>
+
+
+<tr>
+<th>
+How Low Can You Go
+</th>
+<td><button onclick="movedownright ()">Move DownRight</button></td>
+</tr>
+
+
+<tr>
+<th>
+Every Body Clap Yo Hands
+</th> 
+<td><button onclick="movesquare ()">Move Square</button></td>
+</tr>
+
+<tr>
+<th>
+Can You Go Down Low
+</th>
+<td><button onclick="moveoct ()">Move Octagon</button></td>
+</tr>
+
+
+<tr>
+<th>
+All The Way To The Floor
+</th>
+<td><button onclick="movetri ()">Move Triangle</button></td>
+</tr>
+
+
+</table>
+</tbody>
+
+<img id= 'redball' style="height:50px; width:50px;"src="http://fc07.deviantart.net/fs36/f/2008/281/1/e/Red_Ball_by_M4st3rD.jpg"/>
+
+</body>
+</html>
